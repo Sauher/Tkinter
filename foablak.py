@@ -1,4 +1,5 @@
 from tkinter import *
+from akasztofa import akasztofa_toplevel
 
 ablak = Tk()
 ablak.title("Főmenü")
@@ -12,7 +13,7 @@ jo_jatekot.place(relx=0.5, rely=0.5, anchor=CENTER)
 menusor = Frame(ablak)
 menusor.pack(side=TOP, fill=X)
 
-akasztofa_gomb = Button(menusor, text="Akasztófa")
+akasztofa_gomb = Button(menusor, text="Akasztófa", command=lambda: akasztofa_toplevel(ablak))
 akasztofa_gomb.pack(side=LEFT)
 kpo_gomb = Button(menusor, text="Kő papír olló")
 kpo_gomb.pack(side=LEFT)
