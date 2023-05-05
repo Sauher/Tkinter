@@ -1,4 +1,6 @@
 from tkinter import *
+from kpo import dkpo
+from TKaSZ import dtkasz
 from akasztofa import akasztofa_toplevel
 
 ablak = Tk()
@@ -15,11 +17,11 @@ menusor.pack(side=TOP, fill=X)
 
 akasztofa_gomb = Button(menusor, text="Akasztófa", command=lambda: akasztofa_toplevel(ablak))
 akasztofa_gomb.pack(side=LEFT)
-kpo_gomb = Button(menusor, text="Kő papír olló")
+kpo_gomb = Button(menusor, text="Kő papír olló", command=lambda: dkpo(ablak))
 kpo_gomb.pack(side=LEFT)
 scrum_gomb = Button(menusor, text="Scrum teszt")
 scrum_gomb.pack(side=LEFT)
-tkasz_gomb = Button(menusor, text="Találd ki a számot")
+tkasz_gomb = Button(menusor, text="Találd ki a számot",command=lambda: dtkasz(ablak))
 tkasz_gomb.pack(side=LEFT)
 
 ablak.mainloop()
