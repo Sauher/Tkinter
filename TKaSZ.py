@@ -21,19 +21,25 @@ def dtkasz(foablak):
             talalatok == 8
             gondolatlab = Label(tkasz_ablak, text="Gondoltam egy számra 1 és 100 között!")
             talalatoklab = Label(tkasz_ablak, text="Hátralévő találatok:" + str(talalatok))
+            return talalatok
         elif Kozepes == True:
             randomszam == randint(1, 50)
             talalatok == 5
             gondolatlab = Label(tkasz_ablak, text="Gondoltam egy számra 1 és 50 között!")
             talalatoklab = Label(tkasz_ablak, text="Hátralévő találatok:" + str(talalatok))
+            return talalatok
         else:
             randomszam == randint(1,50)
             talalatok == 3
             gondolatlab = Label(tkasz_ablak, text="Gondoltam egy számra 1 és 50 között!")
-            talalatoklab = Label(tkasz_ablak, text="Hátralévő találatok:" + str(talalatok))    
+            talalatoklab = Label(tkasz_ablak, text="Hátralévő találatok:" + str(talalatok))  
+            return talalatok  
 
         gondolatlab.place(anchor=NW, relx=0.02, rely=0.40)
         talalatoklab.place(anchor=NW, relx=0.02, rely=0.45)
+
+    def bevitel():
+        talalatv = eval(talaldki_ent.get())
 
 
 
@@ -48,7 +54,7 @@ def dtkasz(foablak):
     inditas_button = Button(tkasz_ablak, text="Indtítás", command=inditas)
     flavor_lab = Label(tkasz_ablak, text="Találd ki a számot:")
     talaldki_ent = Entry(tkasz_ablak, width=50)
-    bevitel_button = Button(tkasz_ablak, text="Bevitel")
+    bevitel_button = Button(tkasz_ablak, text="Bevitel", command=bevitel)
 
 
 
