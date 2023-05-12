@@ -2,6 +2,19 @@ from tkinter import *
 
 
 def scrum(foablak):
+    def beadas():
+        pontszam = 0
+        if k1.get() == True:
+            pontszam +=1
+        if k2.get() == True:
+            pontszam +=1
+        if k3.get() == True:
+            pontszam +=1
+        if k4.get() == True:
+            pontszam +=1
+        if k5.get() == True:
+            pontszam +=1
+
     k1 = BooleanVar()
     k2 = BooleanVar()
     k3 = BooleanVar()
@@ -29,29 +42,29 @@ def scrum(foablak):
     valaszgomb4_3 = Radiobutton(scrum_ablak, text="6",variable=k4, value=False)
     valaszgomb5_1 = Radiobutton(scrum_ablak, text="3",variable=k5, value=False)
     valaszgomb5_2 = Radiobutton(scrum_ablak, text="7",variable=k5, value=False)
-    valaszgomb5_3 = Radiobutton(scrum_ablak, text="5",variable=k5, value=True, indicatoron=0,height=10,width=10)
+    valaszgomb5_3 = Radiobutton(scrum_ablak, text="5",variable=k5, value=True,font=1)
+    beadasgomb = Button(scrum_ablak, text="Beadás", command=beadas)
 
     kerdes1.place(relx=0.02, rely=0.02, anchor=NW)
     kerdes2.place(relx=0.02, rely=0.10, anchor=NW)
     kerdes3.place(relx=0.02, rely=0.18, anchor=NW)
     kerdes4.place(relx=0.02, rely=0.26, anchor=NW)
     kerdes5.place(relx=0.02, rely=0.34, anchor=NW)
-    valaszgomb1_1.place(relx=0.20, rely=0.02, anchor=NW)
-    valaszgomb1_2.place(relx=0.20, rely=0.02, anchor=NW)
-    valaszgomb1_3.place(relx=0.20, rely=0.02, anchor=NW)
-    valaszgomb2_1.place(relx=0.20, rely=0.02, anchor=NW)
-    valaszgomb2_2.place(relx=0.20, rely=0.02, anchor=NW)
-    valaszgomb2_3.place(relx=0.20, rely=0.02, anchor=NW)
-    valaszgomb3_1.place(relx=0.20, rely=0.02, anchor=NW)
-    valaszgomb3_2.place(relx=0.20, rely=0.02, anchor=NW)
-    valaszgomb3_3.place(relx=0.20, rely=0.02, anchor=NW)
-    valaszgomb4_1.place(relx=0.20, rely=0.02, anchor=NW)
-    valaszgomb4_2.place(relx=0.20, rely=0.02, anchor=NW)
-    valaszgomb4_3.place(relx=0.20, rely=0.02, anchor=NW)
-    valaszgomb5_1.place(relx=0.20, rely=0.02, anchor=NW)
-    valaszgomb5_2.place(relx=0.20, rely=0.02, anchor=NW)
+    valaszgomb1_1.place(relx=0.20, rely=0.01, anchor=NW)
+    valaszgomb1_2.place(relx=0.20, rely=0.04, anchor=NW)
+    valaszgomb1_3.place(relx=0.20, rely=0.07, anchor=NW)
+    valaszgomb2_1.place(relx=0.20, rely=0.20, anchor=NW)
+    valaszgomb2_2.place(relx=0.20, rely=0.22, anchor=NW)
+    valaszgomb2_3.place(relx=0.20, rely=0.22, anchor=NW)
+    valaszgomb3_1.place(relx=0.20, rely=0.22, anchor=NW)
+    valaszgomb3_2.place(relx=0.20, rely=0.22, anchor=NW)
+    valaszgomb3_3.place(relx=0.20, rely=0.22, anchor=NW)
+    valaszgomb4_1.place(relx=0.20, rely=0.22, anchor=NW)
+    valaszgomb4_2.place(relx=0.20, rely=0.22, anchor=NW)
+    valaszgomb4_3.place(relx=0.20, rely=0.22, anchor=NW)
+    valaszgomb5_1.place(relx=0.20, rely=0.22, anchor=NW)
+    valaszgomb5_2.place(relx=0.20, rely=0.22, anchor=NW)
     valaszgomb5_3.place(relx=0.20, rely=0.50, anchor=NW)
-
 
     
     scrum_ablak.mainloop()
