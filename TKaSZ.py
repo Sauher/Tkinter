@@ -12,34 +12,36 @@ def dtkasz(foablak):
     Konnyu = False
     Kozepes = False
     randomszam = 0
-    talalatok = 0
-    
+    talalatok = 3
+    rvl = [randomszam,talalatok]
+
 
     def inditas():
         if Konnyu == True:
             randomszam == randint(1,100)
-            talalatok == 8
+            rvl[1] == 8
             gondolatlab = Label(tkasz_ablak, text="Gondoltam egy számra 1 és 100 között!")
-            talalatoklab = Label(tkasz_ablak, text="Hátralévő találatok:" + str(talalatok))
-            return talalatok
+            talalatoklab = Label(tkasz_ablak, text="Hátralévő találatok:" + str(rvl[1]))
+            gondolatlab.place(anchor=NW, relx=0.02, rely=0.40)
+            talalatoklab.place(anchor=NW, relx=0.02,   rely=0.45)
+            return rvl
+            
         elif Kozepes == True:
             randomszam == randint(1, 50)
-            talalatok == 5
+            rvl[1] == 5
             gondolatlab = Label(tkasz_ablak, text="Gondoltam egy számra 1 és 50 között!")
-            talalatoklab = Label(tkasz_ablak, text="Hátralévő találatok:" + str(talalatok))
-            return talalatok
+            talalatoklab = Label(tkasz_ablak, text="Hátralévő találatok:" + str(rvl[1]))
+            gondolatlab.place(anchor=NW, relx=0.02, rely=0.40)
+            talalatoklab.place(anchor=NW, relx=0.02,   rely=0.45)
+            return rvl
         else:
             randomszam == randint(1,50)
-            talalatok == 3
+            rvl[1] == 3
             gondolatlab = Label(tkasz_ablak, text="Gondoltam egy számra 1 és 50 között!")
-            talalatoklab = Label(tkasz_ablak, text="Hátralévő találatok:" + str(talalatok))  
-            return talalatok  
-
-        gondolatlab.place(anchor=NW, relx=0.02, rely=0.40)
-        talalatoklab.place(anchor=NW, relx=0.02, rely=0.45)
-
-    def bevitel():
-        talalatv = eval(talaldki_ent.get())
+            talalatoklab = Label(tkasz_ablak, text="Hátralévő találatok:" + str(rvl[1]))
+            gondolatlab.place(anchor=NW, relx=0.02, rely=0.40)
+            talalatoklab.place(anchor=NW, relx=0.02,   rely=0.45)
+            return rvl
 
 
 
