@@ -14,7 +14,8 @@ def scrum(foablak):
             pontszam +=1
         if k5.get() == True:
             pontszam +=1
-
+        eredmeny = Label(scrum_ablak, text="A pontszámod: "+str(pontszam)+".",borderwidth=1,relief="solid", width=30, height=5)
+        eredmeny.place(relx=0.30, rely=0.70, anchor=NW)
     k1 = BooleanVar()
     k2 = BooleanVar()
     k3 = BooleanVar()
@@ -42,7 +43,7 @@ def scrum(foablak):
     valaszgomb4_3 = Radiobutton(scrum_ablak, text="6",variable=k4, value=False)
     valaszgomb5_1 = Radiobutton(scrum_ablak, text="3",variable=k5, value=False)
     valaszgomb5_2 = Radiobutton(scrum_ablak, text="7",variable=k5, value=False)
-    valaszgomb5_3 = Radiobutton(scrum_ablak, text="5",variable=k5, value=True,font=1)
+    valaszgomb5_3 = Radiobutton(scrum_ablak, text="5",variable=k5, value=True)
     beadasgomb = Button(scrum_ablak, text="Beadás", command=beadas)
 
     kerdes1.place(relx=0.02, rely=0.02, anchor=NW)
@@ -65,6 +66,7 @@ def scrum(foablak):
     valaszgomb5_1.place(relx=0.20, rely=0.22, anchor=NW)
     valaszgomb5_2.place(relx=0.20, rely=0.22, anchor=NW)
     valaszgomb5_3.place(relx=0.20, rely=0.50, anchor=NW)
+    beadasgomb.place(relx=0.60, rely=0.60, anchor=NW)
 
     
     scrum_ablak.mainloop()
