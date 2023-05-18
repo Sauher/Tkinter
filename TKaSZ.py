@@ -5,6 +5,7 @@ from random import *
 def dtkasz(foablak):
     tkasz_ablak = Toplevel(foablak, height=400, width=600)
     tkasz_ablak.minsize(width=600, height=400)
+    tkasz_ablak.maxsize(width=600, height=400)
     tkasz_ablak.title("Találd ki a számot!")
     #----------------------------------------------------------------
 
