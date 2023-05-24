@@ -78,7 +78,7 @@ def dkpo(foablak):
             gepko.place(anchor=NW, relx=0.55, rely=0.2)
             gepko.config(font=("bold", 100))
             if koigen == True:
-                print("nem")
+                print("Döntetlen")
             elif papirigen == True:
                 print("Játékos")
             else:
@@ -91,7 +91,7 @@ def dkpo(foablak):
             if koigen == True:
                 print("Gép")
             elif papirigen == True:
-                print("Nem")
+                print("Döntetlen")
             else:
                 print("Játékos")
         else:
@@ -104,7 +104,7 @@ def dkpo(foablak):
             elif papirigen == True:
                 print("Gép")
             else:
-                print("Nem")
+                print("Döntetlen")
 
 
 
