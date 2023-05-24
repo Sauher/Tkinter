@@ -15,14 +15,14 @@ def dkpo(foablak):
 
 
     def kovalasztva():
-        kob.config(font=("Times", 35))
-        papirb.config(font=("Times", 30))
-        ollob.config(font=("Times", 30))
+        kob.config(font=("Times", 35), bg="white")
+        papirb.config(font=("Times", 30), bg="gray")
+        ollob.config(font=("Times", 30), bg="gray")
         kob.place(anchor=NW,relx=0.08, rely=0.725)
         #kob.place(anchor=NW, relx=0.1, rely=0.75)
         papirb.place(anchor=NW, relx=0.4, rely=0.75)
         ollob.place(anchor=NW, relx=0.7, rely=0.75)
-        
+
         jatekosko = Label(kpo_ablak, text="Kő   ")
         jatekosko.place(anchor=NW, relx=0.08, rely=0.2)
         jatekosko.config(font=("bold", 100))
@@ -33,9 +33,9 @@ def dkpo(foablak):
 
 
     def papirvalasztva():
-        kob.config(font=("Times", 30))
-        papirb.config(font=("Times", 35))
-        ollob.config(font=("Times", 30))
+        kob.config(font=("Times", 30), bg="gray")
+        papirb.config(font=("Times", 35), bg="white")
+        ollob.config(font=("Times", 30), bg="gray")
         #papirb.place(anchor=NW, relx=0.4, rely=0.75)
         papirb.place(anchor=NW, relx=0.38, rely=0.725)
         kob.place(anchor=NW, relx=0.1, rely=0.75)
@@ -53,9 +53,9 @@ def dkpo(foablak):
 
 
     def ollovalasztva():
-        kob.config(font=("Times", 30))
-        papirb.config(font=("Times", 30))
-        ollob.config(font=("Times", 35))
+        kob.config(font=("Times", 30), bg="gray")
+        papirb.config(font=("Times", 30), bg="gray")
+        ollob.config(font=("Times", 35), bg="white")
         #ollob.place(anchor=NW, relx=0.7, rely=0.75)
         ollob.place(anchor=NW, relx=0.68, rely=0.725)
         kob.place(anchor=NW, relx=0.1, rely=0.75)
@@ -71,15 +71,40 @@ def dkpo(foablak):
         
     def felmutat():
         gepvalasztas = randint(0,3)
+        #time.sleep(2.5)
         if gepvalasztas == 0:
-            gepko = Label(kpo_ablak, text="Kő")
-            gepko.place(anchor=NW, relx=0, rely=0)
+            geptitok.config(font=("Times",0))
+            gepko = Label(kpo_ablak, text="Kő    ")
+            gepko.place(anchor=NW, relx=0.55, rely=0.2)
+            gepko.config(font=("bold", 100))
+            if koigen == True:
+                print("Döntetlen")
+            elif papirigen == True:
+                print("Játékos")
+            else:
+                print("Gép")
         elif gepvalasztas == 1:
-            geppapir = Label(kpo_ablak, text="Papír")
-            geppapir.place(anchor=NW, relx=0, rely=0)
+            geptitok.config(font=("Times",0))
+            geppapir = Label(kpo_ablak, text="Papír   ")
+            geppapir.place(anchor=NW, relx=0.55, rely=0.25)
+            geppapir.config(font=("bold", 65))
+            if koigen == True:
+                print("Gép")
+            elif papirigen == True:
+                print("Döntetlen")
+            else:
+                print("Játékos")
         else:
-            gepollo = Label(kpo_ablak, text="Olló")
-            gepollo.place(anchor=NW, relx=0, rely=0)
+            geptitok.config(font=("Times",0))
+            gepollo = Label(kpo_ablak, text="Olló   ")
+            gepollo.place(anchor=NW, relx=0.55, rely=0.2)
+            gepollo.config(font=("bold", 100))
+            if koigen == True:
+                print("Játékos")
+            elif papirigen == True:
+                print("Gép")
+            else:
+                print("Döntetlen")
 
 
 
@@ -107,13 +132,13 @@ def dkpo(foablak):
     geptitok.place(anchor=NE, relx=0.85, rely=0.2)
     geptitok.config(font=("bold", 100))
     felmutatb.place(anchor=NW, relx=0.425, rely=0.59)
-    felmutatb.config(font=("Times", 15))
+    felmutatb.config(font=("Times", 15), bg="white")
     kob.place(anchor=NW, relx=0.1, rely=0.75)
-    kob.config(font=("Times", 30))
+    kob.config(font=("Times", 30), bg="gray")
     papirb.place(anchor=NW, relx=0.4, rely=0.75)
-    papirb.config(font=("Times", 30))
+    papirb.config(font=("Times", 30), bg="gray")
     ollob.place(anchor=NW, relx=0.7, rely=0.75)
-    ollob.config(font=("Times", 30))
+    ollob.config(font=("Times", 30), bg="gray")
 
     
     kpo_ablak.mainloop()
