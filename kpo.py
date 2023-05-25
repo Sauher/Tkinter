@@ -8,11 +8,9 @@ def dkpo(foablak):
     kpo_ablak.maxsize(width=600, height=400)
     kpo_ablak.title("Kő, Papír, olló")
 
-
     koigen = False
     papirigen = False
     olloigen = False
-
 
     def kovalasztva():
         kob.config(font=("Times", 35), bg="white")
@@ -28,8 +26,10 @@ def dkpo(foablak):
         jatekosko.config(font=("bold", 100))
         jatekostitok.config(font=("", 0))
 
-        koigen == True
-        return koigen
+
+        koigen = True
+        papirigen = False
+        olloigen = False
 
 
     def papirvalasztva():
@@ -46,9 +46,12 @@ def dkpo(foablak):
         jatekospapir.config(font=("bold", 80))
         jatekostitok.config(font=("",0))
 
-        papirigen == True
-        return papirigen
 
+
+        
+        koigen = False
+        papirigen = True
+        olloigen = False
         
 
 
@@ -66,8 +69,10 @@ def dkpo(foablak):
         jatekosollo.config(font=("bold", 100))
         jatekostitok.config(font=("",0))
 
-        olloigen == True
-        return olloigen
+        koigen = False
+        papirigen = False
+        olloigen = True
+        
         
     def felmutat():
         gepvalasztas = randint(0,3)
@@ -81,9 +86,10 @@ def dkpo(foablak):
                 print("Döntetlen")
             elif papirigen == True:
                 print("Játékos")
-            else:
+            elif olloigen == True:
                 print("Gép")
         elif gepvalasztas == 1:
+            geptitok.place(anchor=NW, relx=0.55, rely=0.5)
             geptitok.config(font=("Times",0))
             geppapir = Label(kpo_ablak, text="Papír   ")
             geppapir.place(anchor=NW, relx=0.55, rely=0.25)
@@ -92,7 +98,7 @@ def dkpo(foablak):
                 print("Gép")
             elif papirigen == True:
                 print("Döntetlen")
-            else:
+            elif olloigen == True:
                 print("Játékos")
         else:
             geptitok.config(font=("Times",0))
@@ -103,7 +109,7 @@ def dkpo(foablak):
                 print("Játékos")
             elif papirigen == True:
                 print("Gép")
-            else:
+            elif olloigen == True:
                 print("Döntetlen")
 
 
