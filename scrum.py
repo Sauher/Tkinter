@@ -11,6 +11,7 @@ def scrum(foablak):
         pontszam = 0
         if k1.get() == 1:
             pontszam +=1
+            
         if k2.get() == 1:
             pontszam +=1
         if k3.get() == 1:
