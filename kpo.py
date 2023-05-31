@@ -1,6 +1,6 @@
 from tkinter import *
 from random import * 
-from time import * 
+import time
 
 def dkpo(foablak):
     kpo_ablak = Toplevel(foablak, width=600, height=400)
@@ -162,7 +162,7 @@ def dkpo(foablak):
 
 
 
-
+        
         restartb = Button(kpo_ablak, text="Kilépés", command=restart)
         restartb.place(anchor=NW, relx=0.375, rely=0.775)
         restartb.config(font=("Times", 30), bg="white")
