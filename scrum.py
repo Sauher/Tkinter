@@ -1,7 +1,12 @@
 from tkinter import *
+lay = []
 
 
 def scrum(foablak):
+    def exit_btn():
+        scrum_ablak = lay[0]
+        scrum_ablak.quit()
+        scrum_ablak.destroy()
     def beadas():
         pontszam = 0
         if k1.get() == 1:
@@ -22,6 +27,7 @@ def scrum(foablak):
     k4 = IntVar()
     k5 = IntVar()
     scrum_ablak = Toplevel(foablak, width=600, height=400)
+    lay.append(scrum_ablak)
     scrum_ablak.minsize(width=600, height=400)
     scrum_ablak.title("Scrum teszt")
     kerdes1 = Label(scrum_ablak,text="Hány szerepkör van a scrum-ban?",font=("Arial",15))
@@ -45,7 +51,7 @@ def scrum(foablak):
     valaszgomb5_2 = Radiobutton(scrum_ablak, text="7",variable=k5, value=0)
     valaszgomb5_3 = Radiobutton(scrum_ablak, text="5",variable=k5, value=1)
     beadasgomb = Button(scrum_ablak, text="Beadás", command=beadas)
-    kilepesgomb = Button(scrum_ablak, text="Kilépés", command=scrum_ablak.destroy())
+    kilepesgomb = Button(scrum_ablak, text="Kilépés", command=exit_btn)
 
     kerdes1.place(relx=0.02, rely=0.02, anchor=NW)
     kerdes2.place(relx=0.02, rely=0.17, anchor=NW)
