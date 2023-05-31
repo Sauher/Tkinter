@@ -9,6 +9,10 @@ def dtkasz(foablak):
     tkasz_ablak.title("Találd ki a számot!")
     #----------------------------------------------------------------
 
+    global Konnyu
+    global Kozepes
+    global randomszam
+    global talalatok
 
     Konnyu = False
     Kozepes = False
@@ -18,9 +22,11 @@ def dtkasz(foablak):
 
 
     def inditas():
+        global randomszam
+        global talalatok
         if Konnyu == True:
             randomszam == randint(1,100)
-            rvl[1] == 8
+            talalatok == 8
             gondolatlab = Label(tkasz_ablak, text="Gondoltam egy számra 1 és 100 között!")
             talalatoklab = Label(tkasz_ablak, text="Hátralévő találatok:" + str(rvl[1]))
             gondolatlab.place(anchor=NW, relx=0.02, rely=0.40)
@@ -29,7 +35,7 @@ def dtkasz(foablak):
             
         elif Kozepes == True:
             randomszam == randint(1, 50)
-            rvl[1] == 5
+            talalatok == 5
             gondolatlab = Label(tkasz_ablak, text="Gondoltam egy számra 1 és 50 között!")
             talalatoklab = Label(tkasz_ablak, text="Hátralévő találatok:" + str(rvl[1]))
             gondolatlab.place(anchor=NW, relx=0.02, rely=0.40)
@@ -37,13 +43,15 @@ def dtkasz(foablak):
             return rvl
         else:
             randomszam == randint(1,50)
-            rvl[1] == 3
+            talalatok == 3
             gondolatlab = Label(tkasz_ablak, text="Gondoltam egy számra 1 és 50 között!")
             talalatoklab = Label(tkasz_ablak, text="Hátralévő találatok:" + str(rvl[1]))
             gondolatlab.place(anchor=NW, relx=0.02, rely=0.40)
             talalatoklab.place(anchor=NW, relx=0.02,   rely=0.45)
             return rvl
-
+    def bevitel():
+        print("")
+        
 
 
     #----------------------------------------------------------------
