@@ -11,7 +11,6 @@ def scrum(foablak):
         pontszam = 0
         if k1.get() == 1:
             pontszam +=1
-            
         if k2.get() == 1:
             pontszam +=1
         if k3.get() == 1:
@@ -22,6 +21,21 @@ def scrum(foablak):
             pontszam +=1
         eredmeny = Label(scrum_ablak, text="A pontszámod: "+str(pontszam)+".",borderwidth=1,relief="solid", width=20, height=3)
         eredmeny.place(relx=0.3, rely=0.86, anchor=NW)
+        valaszgomb1_1.config(state=DISABLED)
+        valaszgomb1_2.config(state=DISABLED)
+        valaszgomb1_3.config(state=DISABLED)
+        valaszgomb2_1.config(state=DISABLED)
+        valaszgomb2_2.config(state=DISABLED)
+        valaszgomb2_3.config(state=DISABLED)
+        valaszgomb3_1.config(state=DISABLED)
+        valaszgomb3_2.config(state=DISABLED)
+        valaszgomb3_3.config(state=DISABLED)
+        valaszgomb4_1.config(state=DISABLED)
+        valaszgomb4_2.config(state=DISABLED)
+        valaszgomb4_3.config(state=DISABLED)
+        valaszgomb5_1.config(state=DISABLED)
+        valaszgomb5_2.config(state=DISABLED)
+        valaszgomb5_3.config(state=DISABLED)
     k1 = IntVar()
     k2 = IntVar()
     k3 = IntVar()
